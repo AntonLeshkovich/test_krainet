@@ -1,3 +1,92 @@
-h1 {
-  color: green;
+:root {
+  --text-color: #000000;
+  --accent-orange: #FFA501;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.promo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.promo__container {
+  max-width: 1920px;
+  max-height: 800px;
+}
+.promo__img {
+  max-width: 100%;
+}
+.promo__wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: solid 1px #000;
+  border-bottom: none;
+}
+.promo__content {
+  position: absolute;
+  top: 206px;
+}
+.promo__subtitle {
+  position: relative;
+  margin-left: 10px;
+  margin-bottom: 9px;
+  z-index: 1;
+}
+.promo__subtitle::after {
+  content: "";
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -10px;
+  border-radius: 50%;
+  background-color: var(--accent-orange);
+  z-index: -1;
+}
+.promo__title {
+  margin-bottom: 25px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.promo__btn {
+  padding: 12px 25px 12px 25px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: transparent;
+  transition: background-color 0.4s, color 0.4s;
+}
+.promo__btn:hover {
+  color: #fff;
+  background-color: var(--accent-orange);
+  box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.15);
+}
+.promo__btn:active {
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+
+.portfolio-btn {
+  background-color: var(--accent-orange);
+  margin-right: 20px;
+  box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.15);
 }/*# sourceMappingURL=styles.css.map */
