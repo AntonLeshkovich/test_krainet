@@ -24,8 +24,43 @@ body {
   justify-content: center;
 }
 .promo__container {
+  position: relative;
   max-width: 1920px;
   max-height: 800px;
+}
+.promo__social {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 226px;
+  left: -50px;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  transform: rotate(-90deg);
+}
+.promo__social_text {
+  font-weight: 700;
+  cursor: default;
+}
+.promo__social_line {
+  display: block;
+  width: 70px;
+  height: 2px;
+  background-color: #000;
+}
+.promo__social_icons {
+  display: flex;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+.promo__social_icons svg {
+  transform: rotate(90deg);
+}
+.promo__social_icons svg path {
+  transition: fill 0.3s;
+}
+.promo__social_icons svg:hover path {
+  fill: var(--accent-orange);
 }
 .promo__img {
   max-width: 100%;
@@ -72,7 +107,7 @@ body {
   font-size: 14px;
   font-weight: 700;
   background-color: transparent;
-  transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.3s, color 0.3s;
 }
 .promo__btn:hover {
   color: #fff;

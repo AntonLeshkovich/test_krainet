@@ -28,8 +28,48 @@ body {
     justify-content: center;
     // .promo__container
     &__container {
+        position: relative;
         max-width: 1920px;
         max-height: 800px;
+    }
+    // .promo__social
+    &__social {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 226px;
+        left: -50px;
+        column-gap: 15px;
+        transform: rotate(-90deg);
+        // .promo__social_text
+        &_text {
+            font-weight: 700;
+            cursor: default;
+        }
+        // .promo__social_line
+        &_line {
+            display: block;
+            width: 70px;
+            height: 2px;
+            background-color: #000;
+        }
+        // .promo__social_icons
+        &_icons {
+            display: flex;
+            column-gap: 15px;
+            svg {
+                transform: rotate(90deg);
+                path {
+                    transition: fill .3s;
+                }
+                &:hover {
+                    path {
+                        fill: var(--accent-orange);
+                    }
+                }
+
+            }
+        }
     }
     // .promo__img
     &__img {
@@ -85,7 +125,7 @@ body {
         font-size: 14px;
         font-weight: 700;
         background-color: transparent;
-        transition: background-color .4s, color .4s;
+        transition: background-color .3s, color .3s;
         &:hover {
             color: #fff;
             background-color: var(--accent-orange);
