@@ -7,6 +7,9 @@ body {
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
 }
+body.lock {
+  overflow: hidden;
+}
 
 .wrapper {
   max-width: 1140px;
@@ -27,6 +30,19 @@ body {
   position: relative;
   max-width: 1920px;
   max-height: 800px;
+  overflow: hidden;
+}
+.promo__container.overlay {
+  transition: opacity 0.3s;
+}
+.promo__container.overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 .promo__burger-icon {
   display: flex;
@@ -155,14 +171,21 @@ body {
 }
 
 .menu {
-  position: absolute;
+  position: relative;
   z-index: 10;
 }
 .menu__body {
+  position: absolute;
+  top: 0;
+  left: -100%;
   width: 345px;
   height: 100vh;
   padding: 24px 25px 50px 40px;
   background-color: var(--accent-orange);
+  transition: left 0.3s;
+}
+.menu__body.active {
+  left: 0;
 }
 .menu__icon {
   display: flex;
